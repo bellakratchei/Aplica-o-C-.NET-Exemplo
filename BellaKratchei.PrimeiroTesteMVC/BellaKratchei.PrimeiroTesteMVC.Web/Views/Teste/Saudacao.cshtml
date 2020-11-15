@@ -1,0 +1,13 @@
+﻿@using BellaKratchei.PrimeiroTesteMVC.Web.Models
+@model Pessoa
+
+@{
+    ViewBag.Title = "Saudacao";
+}
+
+<h2>Saudacao</h2>
+
+<p>Olá @Model.Nome, seja bem vindo! </p>
+@Html.Label("Idade: ") @Html.TextBoxFor(p => p.Idade)
+@Html.Label("Endereço: ") @Html.TextBoxFor(p => p.Endereco)
+

@@ -1,0 +1,26 @@
+﻿@using BellaKratchei.PrimeiroTesteMVC.Web.Models
+@model Pessoa
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+<br />
+<br />
+<p>Digite seu nome: </p>
+
+@*Helper Razor(form em html para enviar para o controler)*@
+
+@using (Html.BeginForm("Index", "Teste", FormMethod.Post))
+{
+    @Html.LabelFor(p => p.Nome);
+    @Html.EditorFor(p => p.Nome, new { id = "txbNome" });
+    @Html.LabelFor(p => p.Idade);
+    @Html.EditorFor(p => p.Idade);
+    @Html.LabelFor(p => p.Endereco);
+    @Html.EditorFor(p => p.Endereco);
+    <input type="submit" value="Enviar" />
+}
+
+
